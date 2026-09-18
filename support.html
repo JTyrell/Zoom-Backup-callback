@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support & Help Center — Zoom BackUpz</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+        </div>
+        <span>Zoom BackUpz</span>
+      </a>
+      <nav>
+        <a href="/docs">Documentation</a>
+        <a href="/configure">Configure</a>
+        <a href="/support" class="active">Support</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
+        <a href="https://github.com/JTyrell/Zoom-Indexer" target="_blank" rel="noopener" class="github-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="badge">Help Center</div>
+      <h1>Support & Help Center</h1>
+      <div class="meta-date">Direct Assistance for Zoom BackUpz Users</div>
+    </div>
+
+    <!-- Contact Card -->
+    <div class="card" style="border-color: var(--border-highlight); background: linear-gradient(180deg, var(--bg-secondary) 0%, rgba(11, 92, 255, 0.05) 100%);">
+      <h2>Need Help? Get Direct Support</h2>
+      <p>Our dedicated support team is here to assist you with installation, configuration, backup verification, or troubleshooting any integration issues.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 18px;">
+        <a href="mailto:support@zoombackup.pages.dev" class="btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Email: support@zoombackup.pages.dev
+        </a>
+        <a href="/docs" class="btn btn-outline">
+          Browse Documentation Guide
+        </a>
+      </div>
+      <p style="font-size: 13px; color: var(--text-muted); margin-top: 14px; margin-bottom: 0;">
+        ⚡ <strong>Response SLA:</strong> We typically respond to all support requests within <strong>24 to 48 business hours</strong> (Monday through Friday, 9:00 AM – 6:00 PM EST).
+      </p>
+    </div>
+
+    <!-- Troubleshooting Guide -->
+    <section>
+      <h2>Common Troubleshooting Scenarios</h2>
+
+      <div class="card">
+        <h3>1. "Invalid Client ID" or Sign-in Error</h3>
+        <p><strong>Cause:</strong> The Client ID or Secret entered in the desktop app does not match the registered Zoom Marketplace app credentials, or the redirect URL in Zoom's marketplace settings doesn't match.</p>
+        <p><strong>Solution:</strong></p>
+        <ul>
+          <li>Open the <a href="https://marketplace.zoom.us/develop/create" target="_blank" rel="noopener">Zoom App Marketplace</a> and verify your app credentials under <strong>App Credentials</strong>.</li>
+          <li>Ensure your <strong>OAuth Redirect URL</strong> and <strong>OAuth Allow List</strong> include: <code>https://zoom-backup-callback.pages.dev/</code></li>
+          <li>In Zoom BackUpz, paste the new Client ID and Client Secret, then click <strong>Sign In with Zoom (Browser)</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>2. Browser Did Not Automatically Redirect Back to App</h3>
+        <p><strong>Cause:</strong> Some browser security extensions or popup blockers prevent web pages from invoking custom desktop URI protocols (<code>zoombackup://</code>).</p>
+        <p><strong>Solution:</strong></p>
+        <ul>
+          <li>On the authorization success page in your browser, click the blue <strong>"Open Zoom Backup System"</strong> button.</li>
+          <li>If the app still does not resume, copy the <strong>Authorization Code</strong> displayed on the webpage.</li>
+          <li>In Zoom BackUpz, click <em>"Having trouble with auto-redirect?"</em>, paste the code, and click <strong>Complete Sign-In with Code</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>3. Downloads Failing or Stalling</h3>
+        <p><strong>Cause:</strong> Network interruption, expired download tokens from Zoom, or insufficient disk space.</p>
+        <p><strong>Solution:</strong></p>
+        <ul>
+          <li>Verify your destination drive has sufficient free storage for high-definition MP4 video files.</li>
+          <li>Zoom BackUpz features automated chunked retry logic. If a download stalls, click <strong>Retry</strong> on the recording item.</li>
+          <li>If your access token expired during a long backup batch, the application will refresh it automatically via the Zoom OAuth refresh token.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <h2>Frequently Asked Questions (FAQ)</h2>
+
+      <div class="card">
+        <h3>Does Zoom BackUpz send my video recordings to any third-party cloud?</h3>
+        <p><strong>No. Absolutely not.</strong> All cloud recording files are downloaded directly from Zoom's CDN to your host computer via encrypted HTTPS. Your video, audio, and transcript files never pass through any intermediate server operated by Zoom BackUpz or third parties.</p>
+      </div>
+
+      <div class="card">
+        <h3>What Zoom permissions (scopes) are required?</h3>
+        <p>Zoom BackUpz requests only the minimal permissions required to archive your recordings:</p>
+        <ul>
+          <li><code>recording:read</code> / <code>cloud_recording:read</code>: To list and download your cloud recordings.</li>
+          <li><code>user:read</code>: To identify your account and organize recordings by user.</li>
+        </ul>
+        <p>The app does <strong>not</strong> request write, delete, or meeting control permissions.</p>
+      </div>
+
+      <div class="card">
+        <h3>How do I disconnect or remove the app?</h3>
+        <p>You can revoke access at any time directly through the Zoom App Marketplace:</p>
+        <ol>
+          <li>Sign into <a href="https://marketplace.zoom.us/" target="_blank" rel="noopener">marketplace.zoom.us</a>.</li>
+          <li>Click <strong>Manage</strong> &gt; <strong>Added Apps</strong>.</li>
+          <li>Click <strong>Remove</strong> next to <strong>Zoom BackUpz</strong>.</li>
+        </ol>
+        <p>For complete details, see our <a href="/docs#removing-the-app">Deauthorization Guide</a>.</p>
+      </div>
+    <!-- GitHub Issue Trackers -->
+    <section>
+      <h2>GitHub Repositories & Community Issue Trackers</h2>
+      <div class="card">
+        <p>Zoom BackUpz is actively developed and maintained across two public repositories:</p>
+        <ul>
+          <li>
+            <strong>Main Desktop Application Repository:</strong>
+            <a href="https://github.com/JTyrell/Zoom-Indexer" target="_blank" rel="noopener">JTyrell/Zoom-Indexer</a>
+            — Flutter Windows desktop client, DPAPI encryption engine, and local SQLite archiver.
+            (<a href="https://github.com/JTyrell/Zoom-Indexer/issues" target="_blank" rel="noopener">Report Desktop App Bug</a>)
+          </li>
+          <li style="margin-top: 10px;">
+            <strong>OAuth Callback & Documentation Repository:</strong>
+            <a href="https://github.com/JTyrell/Zoom-Backup-callback" target="_blank" rel="noopener">JTyrell/Zoom-Backup-callback</a>
+            — Authentication redirect handler, compliance documentation, and static web portal.
+            (<a href="https://github.com/JTyrell/Zoom-Backup-callback/issues" target="_blank" rel="noopener">Report Web/OAuth Issue</a>)
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/docs">Documentation</a>
+        <a href="/configure">Configuration</a>
+        <a href="/support">Support</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
+        <a href="https://github.com/JTyrell/Zoom-Indexer" target="_blank" rel="noopener">App Repo (Zoom-Indexer)</a>
+        <a href="https://github.com/JTyrell/Zoom-Backup-callback" target="_blank" rel="noopener">Callback Repo (Zoom-Backup-callback)</a>
+      </div>
+      <p class="footer-disclaimer">
+        Zoom BackUpz is an independent application and is not affiliated with, sponsored by, or endorsed by Zoom Video Communications, Inc. Zoom is a registered trademark of Zoom Video Communications, Inc.
+      </p>
+      <p style="font-size: 12px; color: var(--text-muted);">© 2026 Zoom BackUpz. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

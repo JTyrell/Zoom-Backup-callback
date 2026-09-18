@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Zoom BackUpz</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+        </div>
+        <span>Zoom BackUpz</span>
+      </a>
+      <nav>
+        <a href="/docs">Documentation</a>
+        <a href="/configure">Configure</a>
+        <a href="/support">Support</a>
+        <a href="/privacy" class="active">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
+        <a href="https://github.com/JTyrell/Zoom-Indexer" target="_blank" rel="noopener" class="github-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="badge">Legal & Compliance</div>
+      <h1>Privacy Policy</h1>
+      <div class="meta-date">Effective Date: September 18, 2026 • Version 1.0</div>
+    </div>
+
+    <div class="callout">
+      <p class="callout-title">Privacy-First Architecture Notice</p>
+      <p>Zoom BackUpz is engineered with a strict <strong>local-first, zero-knowledge architecture</strong>. All recording media files, video files, audio streams, and transcripts downloaded from Zoom are processed and stored directly on your own hardware or private storage destination. We operate <strong>zero intermediary cloud servers</strong> that inspect, hold, or sell your meeting content.</p>
+    </div>
+
+    <section>
+      <h2>1. Introduction</h2>
+      <p>This Privacy Policy applies to the <strong>Zoom BackUpz</strong> application ("the App", "we", "us", or "our"), designed to help individuals and organizations securely download, index, and archive Zoom Cloud Recordings to their own private storage. This policy outlines how Zoom BackUpz accesses, collects, uses, retains, and protects information when you connect the application to your Zoom account via Zoom OAuth 2.0.</p>
+      <p>By installing, authorizing, or using Zoom BackUpz, you acknowledge the terms described in this Privacy Policy. If you do not agree with this policy, please do not authorize or use the application.</p>
+    </section>
+
+    <section>
+      <h2>2. Information We Access and Process from Zoom</h2>
+      <p>When you authorize Zoom BackUpz to connect with your Zoom account, the App requests permission to access specific data strictly necessary to facilitate recording backup and local indexing:</p>
+      <ul>
+        <li><strong>Zoom User Profile Information:</strong> We access basic profile information including your Zoom User ID, display name, and email address. This data is used solely to identify the authorized account and organize downloaded recordings by user or host.</li>
+        <li><strong>Cloud Recording Metadata:</strong> We retrieve metadata associated with your meetings and recordings, including meeting topic/title, meeting ID, recording start and end timestamps, duration, file sizes, and download URLs.</li>
+        <li><strong>Recording Media Content:</strong> Video recordings (.mp4), audio recordings (.m4a), and transcript files (.vtt / .txt) that you choose to back up.</li>
+        <li><strong>Authentication Tokens:</strong> OAuth 2.0 access tokens and refresh tokens provided by Zoom to authorize API calls on your behalf.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. How We Use Your Information</h2>
+      <p>Information accessed through the Zoom API is used exclusively for the following operational purposes:</p>
+      <ul>
+        <li>Authenticating your session with Zoom and refreshing temporary access tokens.</li>
+        <li>Retrieving lists of your available cloud recordings to display in your desktop dashboard.</li>
+        <li>Downloading cloud recording video, audio, and transcript files directly to your configured local storage directory or private WebDAV server.</li>
+        <li>Indexing recording dates, topics, and file paths in a local SQLite database on your device for rapid offline search and management.</li>
+      </ul>
+      <p><strong>We do NOT:</strong></p>
+      <ul>
+        <li>Sell, lease, rent, or trade your personal data or meeting content to any third parties or data brokers.</li>
+        <li>Use your recording media or transcripts for machine learning, artificial intelligence model training, or algorithmic profiling.</li>
+        <li>Transmit your meeting content to any external servers operated by us or third parties.</li>
+        <li>Track your web activity, serve advertising, or embed third-party tracking scripts.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Data Storage, Retention, and Security</h2>
+      <div class="card">
+        <h3>Local Encryption & OS Keychain</h3>
+        <p>Your Zoom OAuth credentials (access token, refresh token, client credentials) are never stored in plaintext. On Windows, they are encrypted using the <strong>Windows Data Protection API (DPAPI)</strong>, binding decryption keys exclusively to your logged-in Windows user account.</p>
+        
+        <h3>Local-Only File Storage</h3>
+        <p>All downloaded recordings, chat logs, transcripts, and database indexes reside strictly in the folder destination you specify (e.g. your local hard drive, external drive, or authenticated WebDAV network storage). Zoom BackUpz operates without a central database server.</p>
+
+        <h3>Data Retention & Deletion</h3>
+        <p>Authentication tokens are retained on your device only for as long as your session is active. Clicking <strong>Sign Out</strong> in the application immediately deletes all stored access and refresh tokens from your OS keychain. Uninstalling the application removes the desktop software. You can delete downloaded recording files from your computer at any time using your native operating system file manager.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Your Data Subject Rights (GDPR & CCPA/CPRA)</h2>
+      <p>Depending on your jurisdiction (including the European Economic Area, United Kingdom, and California), you possess specific legal rights regarding your personal information:</p>
+      <ul>
+        <li><strong>Right to Know / Access:</strong> You have the right to request information about the categories and specific pieces of personal data accessed by the application. Because Zoom BackUpz stores all data locally on your computer, you have continuous direct access to all data on your own device.</li>
+        <li><strong>Right to Rectification:</strong> You have the right to request correction of inaccurate personal data.</li>
+        <li><strong>Right to Erasure / Deletion ("Right to be Forgotten"):</strong> You have the right to delete all data collected by Zoom BackUpz. You can accomplish this immediately by signing out of the application and deleting your local backup folder.</li>
+        <li><strong>Right to Restrict or Object to Processing:</strong> You may revoke the application's permission to process your Zoom data at any time through the Zoom App Marketplace.</li>
+        <li><strong>Right to Data Portability:</strong> All backed-up recordings are saved in standard, non-proprietary formats (.mp4, .m4a, .vtt) allowing effortless migration to any platform.</li>
+      </ul>
+      <p><strong>How to Exercise Your Rights:</strong> Since Zoom BackUpz does not store personal data on cloud servers, you have immediate sovereign control over your data directly on your device. For any inquiries or assistance regarding data rights, contact us at <a href="mailto:support@zoombackup.pages.dev">support@zoombackup.pages.dev</a>.</p>
+    </section>
+
+    <section>
+      <h2>6. How to Disconnect and Revoke Access</h2>
+      <p>You can revoke Zoom BackUpz's access to your Zoom account at any moment:</p>
+      <ol>
+        <li>Navigate to the <a href="https://marketplace.zoom.us/" target="_blank" rel="noopener">Zoom App Marketplace</a> and sign in.</li>
+        <li>Click <strong>Manage</strong> in the upper-right corner of the page.</li>
+        <li>Click <strong>Added Apps</strong> from the left menu.</li>
+        <li>Locate <strong>Zoom BackUpz</strong> and click <strong>Remove</strong>.</li>
+        <li>Confirm the deauthorization. This instantly revokes all existing API tokens.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>7. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable legal requirements. The updated policy will be posted on this page with an updated "Effective Date". We encourage you to review this policy periodically.</p>
+    </section>
+
+    <section>
+      <h2>8. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out to our team:</p>
+      <p><strong>Email:</strong> <a href="mailto:support@zoombackup.pages.dev">support@zoombackup.pages.dev</a><br />
+      <strong>Support Portal:</strong> <a href="/support">https://zoom-backup-callback.pages.dev/support</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/docs">Documentation</a>
+        <a href="/configure">Configuration</a>
+        <a href="/support">Support</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
+        <a href="https://github.com/JTyrell/Zoom-Indexer" target="_blank" rel="noopener">App Repo (Zoom-Indexer)</a>
+        <a href="https://github.com/JTyrell/Zoom-Backup-callback" target="_blank" rel="noopener">Callback Repo (Zoom-Backup-callback)</a>
+      </div>
+      <p class="footer-disclaimer">
+        Zoom BackUpz is an independent application and is not affiliated with, sponsored by, or endorsed by Zoom Video Communications, Inc. Zoom is a registered trademark of Zoom Video Communications, Inc.
+      </p>
+      <p style="font-size: 12px; color: var(--text-muted);">© 2026 Zoom BackUpz. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

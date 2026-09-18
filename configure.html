@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configure Integration — Zoom BackUpz</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+        </div>
+        <span>Zoom BackUpz</span>
+      </a>
+      <nav>
+        <a href="/docs">Documentation</a>
+        <a href="/configure" class="active">Configure</a>
+        <a href="/support">Support</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
+        <a href="https://github.com/JTyrell/Zoom-Indexer" target="_blank" rel="noopener" class="github-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="badge">Integration Management</div>
+      <h1>Configure Zoom BackUpz</h1>
+      <div class="meta-date">Post-Authorization Management & Settings Guide</div>
+    </div>
+
+    <div class="callout">
+      <p class="callout-title">Client-Side Configuration</p>
+      <p>Because Zoom BackUpz runs as a secure desktop application on your Windows machine, all active integration settings, backup destinations, and schedules are configured directly within your <strong>Zoom BackUpz Desktop Client</strong>.</p>
+    </div>
+
+    <section>
+      <h2>1. Quick Desktop App Launcher</h2>
+      <div class="card" style="text-align: center; padding: 32px 24px;">
+        <h3 style="margin-top: 0;">Open Zoom BackUpz Settings</h3>
+        <p style="max-width: 520px; margin: 0 auto 20px;">Launch the desktop application directly from your browser to modify your storage destinations, sync schedules, or account connection.</p>
+        <a href="zoombackup://settings" class="btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+          Open App Settings in Zoom BackUpz
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Configuring Storage Destinations</h2>
+      <p>Zoom BackUpz supports multiple destination storage targets for downloaded recordings and transcripts:</p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Local & External Disk Storage</h3>
+          <p>Store your recording archive on any directory accessible to your Windows computer.</p>
+          <ul>
+            <li>Internal SSD/HDD (e.g. <code>C:\Users\Username\ZoomBackups</code>)</li>
+            <li>External high-capacity USB/Thunderbolt drives</li>
+            <li>Mapped network drives (SMB/CIFS file shares)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Private WebDAV / Nextcloud</h3>
+          <p>Directly transfer backup files to your private or corporate Nextcloud/WebDAV cloud storage.</p>
+          <ul>
+            <li>WebDAV Host URL (e.g. <code>https://cloud.example.com/remote.php/webdav/</code>)</li>
+            <li>Username and encrypted App Password</li>
+            <li>Custom remote directory structure</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Synchronization Schedules & Indexing</h2>
+      <p>In the application settings, you can define how and when Zoom BackUpz syncs your cloud recordings:</p>
+      <ul>
+        <li><strong>Automatic Polling Interval:</strong> Choose how frequently the app checks Zoom for newly ended meetings (e.g. Every 1 hour, Every 6 hours, or Daily).</li>
+        <li><strong>File Type Filters:</strong> Choose whether to archive all files (MP4 video, M4A audio, VTT transcripts, in-meeting chat logs) or select specific media assets.</li>
+        <li><strong>Bandwidth & Concurrency:</strong> Set maximum simultaneous downloads to optimize network performance.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Account & Token Management</h2>
+      <div class="card">
+        <h3>Connected Account Information</h3>
+        <p>You can view your currently connected Zoom User ID, authorized scopes, and token validity inside the desktop app. Tokens are refreshed automatically without requiring you to re-enter your password.</p>
+
+        <h3>Switching Accounts or Disconnecting</h3>
+        <p>To switch to a different Zoom account or completely disconnect the application:</p>
+        <ol>
+          <li>Click <strong>Sign Out</strong> in the top-right corner of the Zoom BackUpz window.</li>
+          <li>To permanently remove authorization from Zoom's side, follow the <a href="/docs#removing-the-app">Deauthorization Steps in Zoom Marketplace</a>.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/docs">Documentation</a>
+        <a href="/configure">Configuration</a>
+        <a href="/support">Support</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
+        <a href="https://github.com/JTyrell/Zoom-Indexer" target="_blank" rel="noopener">App Repo (Zoom-Indexer)</a>
+        <a href="https://github.com/JTyrell/Zoom-Backup-callback" target="_blank" rel="noopener">Callback Repo (Zoom-Backup-callback)</a>
+      </div>
+      <p class="footer-disclaimer">
+        Zoom BackUpz is an independent application and is not affiliated with, sponsored by, or endorsed by Zoom Video Communications, Inc. Zoom is a registered trademark of Zoom Video Communications, Inc.
+      </p>
+      <p style="font-size: 12px; color: var(--text-muted);">© 2026 Zoom BackUpz. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

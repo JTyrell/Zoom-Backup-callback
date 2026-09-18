@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation & User Guide — Zoom BackUpz</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+        </div>
+        <span>Zoom BackUpz</span>
+      </a>
+      <nav>
+        <a href="/docs" class="active">Documentation</a>
+        <a href="/configure">Configure</a>
+        <a href="/support">Support</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
+        <a href="https://github.com/JTyrell/Zoom-Indexer" target="_blank" rel="noopener" class="github-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="badge">Official Guide</div>
+      <h1>Zoom BackUpz User Guide</h1>
+      <div class="meta-date">Comprehensive guide for Adding, Using, and Removing the Zoom BackUpz integration</div>
+    </div>
+
+    <!-- Quick Navigation -->
+    <div class="card" style="background: rgba(11, 92, 255, 0.04); border-color: rgba(11, 92, 255, 0.2);">
+      <h3 style="margin-top: 0;">Table of Contents</h3>
+      <ul style="margin-bottom: 0;">
+        <li><a href="#prerequisites">1. Prerequisites & System Requirements</a></li>
+        <li><a href="#adding-the-app">2. Adding and Authorizing the App</a></li>
+        <li><a href="#using-the-app">3. Using the App (Backup, Indexing & Storage)</a></li>
+        <li><a href="#removing-the-app">4. Removing and Deauthorizing the App</a></li>
+        <li><a href="#security-faq">5. Security Architecture & Data Handling</a></li>
+      </ul>
+    </div>
+
+    <!-- 1. Prerequisites -->
+    <section id="prerequisites">
+      <h2>1. Prerequisites & System Requirements</h2>
+      <p>Before installing and using Zoom BackUpz, ensure you have the following:</p>
+      <ul>
+        <li><strong>Zoom Account:</strong> A Zoom Pro, Business, Enterprise, or Education account with <strong>Cloud Recording</strong> enabled.</li>
+        <li><strong>User Role:</strong> User or Admin permissions with access to your account's cloud recordings.</li>
+        <li><strong>Operating System:</strong> Windows 10 or Windows 11 (64-bit).</li>
+        <li><strong>Storage:</strong> Adequate local disk space or network-attached storage (NAS/WebDAV) to hold downloaded video files.</li>
+        <li><strong>Network:</strong> An active internet connection for communicating with the Zoom API and streaming downloads.</li>
+      </ul>
+    </section>
+
+    <!-- 2. Adding the App -->
+    <section id="adding-the-app">
+      <h2>2. Adding and Authorizing the App</h2>
+      <p>Follow these steps to install Zoom BackUpz and authorize it with your Zoom account:</p>
+
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Download & Install the Desktop Application</h3>
+          <p>Download the official Zoom BackUpz installer (<code>zoom_backup_system.exe</code>) on your Windows machine and run the setup. The application will launch with a clean sign-in screen.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Enter App Credentials (One-Time Setup)</h3>
+          <p>If you are deploying Zoom BackUpz within your organization, enter your <strong>Client ID</strong> and <strong>Client Secret</strong> from the Zoom App Marketplace. The credentials are encrypted using the Windows Data Protection API (DPAPI) so you only need to enter them once.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Authorize via Your Default Browser</h3>
+          <p>Click <strong>Sign In with Zoom (Browser)</strong>. The application will automatically open your default browser (Chrome, Edge, Firefox) directly to Zoom's secure login page at <code>zoom.us</code>.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Grant Permissions</h3>
+          <p>Review the requested permissions:
+            <ul>
+              <li><code>recording:read</code> / <code>cloud_recording:read</code>: To list and download your cloud recordings.</li>
+              <li><code>user:read</code>: To identify your account and organize recordings by user.</li>
+            </ul>
+            Click <strong>Allow</strong> to grant permission.
+          </p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h3>Automatic Return to Desktop App</h3>
+          <p>Zoom redirects to our verified callback page (<code>https://zoom-backup-callback.pages.dev/</code>), which automatically prompts your system to launch <code>zoombackup://</code> and bring Zoom BackUpz to the foreground, fully authenticated.</p>
+          <p><em>Fallback:</em> If your browser blocks protocol handlers, click <strong>"Open Zoom Backup System"</strong> on the webpage, or copy the displayed authorization code and paste it into the desktop app.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Using the App -->
+    <section id="using-the-app">
+      <h2>3. Using the App</h2>
+      <p>Once authenticated, Zoom BackUpz gives you full control over your cloud recordings:</p>
+
+      <div class="card">
+        <h3>A. Selecting Your Backup Destination</h3>
+        <p>Go to the <strong>Settings</strong> tab in the desktop application. You can choose:</p>
+        <ul>
+          <li><strong>Local Directory:</strong> Any local hard drive, partition, or external storage drive (e.g. <code>D:\ZoomBackups\</code>).</li>
+          <li><strong>WebDAV / Nextcloud Storage:</strong> Connect directly to your private NAS, Nextcloud, or WebDAV instance by entering the server URL, username, and password.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>B. Browsing & Indexing Recordings</h3>
+        <p>The <strong>Dashboard</strong> displays all your Zoom cloud recordings chronologically, showing meeting topic, date, duration, file sizes, and available file types (MP4 video, M4A audio, VTT transcripts). All data is cached locally in an embedded SQLite database for instantaneous offline search.</p>
+      </div>
+
+      <div class="card">
+        <h3>C. Downloading & Archiving</h3>
+        <p>You can download individual recordings or initiate a batch backup. Zoom BackUpz handles parallel downloads, tracks progress in real-time, and automatically verifies file integrity upon completion.</p>
+      </div>
+
+      <div class="card">
+        <h3>D. System Tray & Background Operation</h3>
+        <p>Closing the window minimizes Zoom BackUpz to your Windows System Tray (notification area). The app continues background indexing without cluttering your taskbar. Right-click the tray icon to restore the window or exit completely.</p>
+      </div>
+    </section>
+
+    <!-- 4. Removing the App -->
+    <section id="removing-the-app">
+      <h2>4. Removing and Deauthorizing the App</h2>
+      <p>If you no longer wish to use Zoom BackUpz, follow these two simple steps to completely disconnect your Zoom account and uninstall the desktop application:</p>
+
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Deauthorize via Zoom App Marketplace (Revoke Access)</h3>
+          <ol>
+            <li>Log in to your Zoom account at <a href="https://marketplace.zoom.us/" target="_blank" rel="noopener">https://marketplace.zoom.us/</a>.</li>
+            <li>In the top-right corner, click <strong>Manage</strong>.</li>
+            <li>In the left sidebar, click <strong>Added Apps</strong> (or search for <strong>Zoom BackUpz</strong>).</li>
+            <li>Click <strong>Remove</strong> next to <strong>Zoom BackUpz</strong>.</li>
+            <li>Confirm the removal. Zoom will immediately revoke all active OAuth access and refresh tokens, terminating all API access.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Remove the Application from Your Computer</h3>
+          <ol>
+            <li>In the Zoom BackUpz desktop application, click <strong>Sign Out</strong>. This wipes all encrypted tokens and cached credentials from your Windows DPAPI keychain.</li>
+            <li>Open the Windows <strong>Start Menu</strong> &gt; <strong>Settings</strong> &gt; <strong>Apps</strong> &gt; <strong>Installed Apps</strong>.</li>
+            <li>Find <strong>Zoom BackUpz</strong> in the list, click the three dots, and select <strong>Uninstall</strong>.</li>
+            <li>Follow the on-screen prompts to complete the uninstallation.</li>
+            <li><em>Optional:</em> Your downloaded recording files remain on your local disk. You can keep them or delete the backup folder at your discretion.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Security & Privacy FAQ -->
+    <section id="security-faq">
+      <h2>5. Security Architecture & Data Handling</h2>
+      <div class="card">
+        <p><strong>Zero Intermediary Cloud Storage:</strong> Zoom BackUpz is a local client-side tool. Your meeting videos and transcripts never transit through any external servers operated by us. Downloads flow straight from Zoom's official servers to your target destination.</p>
+        <p><strong>Enterprise-Grade Local Encryption:</strong> All sensitive credentials (tokens, client secrets) are encrypted on disk using the Windows Data Protection API (DPAPI), ensuring only your authenticated Windows profile can decrypt them.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/docs">Documentation</a>
+        <a href="/configure">Configuration</a>
+        <a href="/support">Support</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
+        <a href="https://github.com/JTyrell/Zoom-Indexer" target="_blank" rel="noopener">App Repo (Zoom-Indexer)</a>
+        <a href="https://github.com/JTyrell/Zoom-Backup-callback" target="_blank" rel="noopener">Callback Repo (Zoom-Backup-callback)</a>
+      </div>
+      <p class="footer-disclaimer">
+        Zoom BackUpz is an independent application and is not affiliated with, sponsored by, or endorsed by Zoom Video Communications, Inc. Zoom is a registered trademark of Zoom Video Communications, Inc.
+      </p>
+      <p style="font-size: 12px; color: var(--text-muted);">© 2026 Zoom BackUpz. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
