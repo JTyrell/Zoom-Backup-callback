@@ -9,6 +9,7 @@
   <a href="https://zoom-backup-callback.pages.dev/"><img src="https://img.shields.io/badge/Hosted%20On-Cloudflare%20Pages-F38020.svg" alt="Cloudflare Pages" /></a>
   <a href="https://jtyrell.github.io/zoom-backup-callback/"><img src="https://img.shields.io/badge/Mirror-GitHub%20Pages-222222.svg" alt="GitHub Pages" /></a>
   <a href="https://marketplace.zoom.us/"><img src="https://img.shields.io/badge/Zoom%20Marketplace-Compliance%20Ready-2D8CFF.svg" alt="Zoom Marketplace" /></a>
+  <a href="https://zoom-backup-callback.pages.dev/downloads"><img src="https://img.shields.io/badge/Downloads-Windows%20%26%20Linux%20Releases-10b981.svg?logo=cloud" alt="Download Releases" /></a>
 </p>
 
 Official web portal, authentication callback redirect handler, and compliance documentation host for **Zoom BackUpz** (the desktop backup and indexing suite for Zoom Cloud Recordings).
@@ -59,12 +60,23 @@ All pages are deployed live with high availability on Cloudflare Pages and mirro
 
 | Resource | Primary URL (Cloudflare Pages) | Secondary Mirror (GitHub Pages) | Description |
 | :--- | :--- | :--- | :--- |
+| **Downloads & Releases** | [zoom-backup-callback.pages.dev/downloads](https://zoom-backup-callback.pages.dev/downloads) | [jtyrell.github.io/zoom-backup-callback/downloads](https://jtyrell.github.io/zoom-backup-callback/downloads) | Official Windows and Linux packages, checksums, and setup guides |
 | **Landing & Callback** | [zoom-backup-callback.pages.dev](https://zoom-backup-callback.pages.dev/) | [jtyrell.github.io/zoom-backup-callback](https://jtyrell.github.io/zoom-backup-callback/) | Dual-purpose landing page and OAuth redirect handler |
 | **User Guide & Docs** | [zoom-backup-callback.pages.dev/docs](https://zoom-backup-callback.pages.dev/docs) | [jtyrell.github.io/zoom-backup-callback/docs](https://jtyrell.github.io/zoom-backup-callback/docs) | Instructions for Adding, Using, and Removing the app |
 | **Privacy Policy** | [zoom-backup-callback.pages.dev/privacy](https://zoom-backup-callback.pages.dev/privacy) | [jtyrell.github.io/zoom-backup-callback/privacy](https://jtyrell.github.io/zoom-backup-callback/privacy) | GDPR/CCPA local-first privacy policy |
 | **Terms of Use** | [zoom-backup-callback.pages.dev/terms](https://zoom-backup-callback.pages.dev/terms) | [jtyrell.github.io/zoom-backup-callback/terms](https://jtyrell.github.io/zoom-backup-callback/terms) | Software license and acceptable use terms |
 | **Support Center** | [zoom-backup-callback.pages.dev/support](https://zoom-backup-callback.pages.dev/support) | [jtyrell.github.io/zoom-backup-callback/support](https://jtyrell.github.io/zoom-backup-callback/support) | Help desk, 24–48h SLA, FAQ, and troubleshooting |
 | **Configure Guide** | [zoom-backup-callback.pages.dev/configure](https://zoom-backup-callback.pages.dev/configure) | [jtyrell.github.io/zoom-backup-callback/configure](https://jtyrell.github.io/zoom-backup-callback/configure) | Post-authorization configuration management |
+
+---
+
+## Official Binary Releases
+
+Download pre-built production packages hosted on Cloudflare R2:
+
+* **Windows 10 / 11 (64-bit):** [ZoomBackUpz-v1.0.0-windows-x64.zip](https://pub-c35935302f714d1a97c9c097bcecf7af.r2.dev/ZoomBackUpz-v1.0.0-windows-x64.zip) (13.9 MB)
+* **Linux (x86_64):** [ZoomBackUpz-v1.0.0-linux-x64.tar.gz](https://pub-c35935302f714d1a97c9c097bcecf7af.r2.dev/ZoomBackUpz-v1.0.0-linux-x64.tar.gz) (48 KB)
+* **Web Portal:** [https://zoom-backup-callback.pages.dev/downloads](https://zoom-backup-callback.pages.dev/downloads)
 
 ---
 

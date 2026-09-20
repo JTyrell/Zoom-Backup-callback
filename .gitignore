@@ -1,0 +1,4 @@
+.wrangler/
+*.metadata.json
+.DS_Store
+Thumbs.db

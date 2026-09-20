@@ -21,6 +21,7 @@
         <span>Zoom BackUpz</span>
       </a>
       <nav>
+        <a href="/downloads">Downloads</a>
         <a href="/docs" class="active">Documentation</a>
         <a href="/configure">Configure</a>
         <a href="/support">Support</a>
@@ -60,7 +61,12 @@
       <ul>
         <li><strong>Zoom Account:</strong> A Zoom Pro, Business, Enterprise, or Education account with <strong>Cloud Recording</strong> enabled.</li>
         <li><strong>User Role:</strong> User or Admin permissions with access to your account's cloud recordings.</li>
-        <li><strong>Operating System:</strong> Windows 10 or Windows 11 (64-bit).</li>
+        <li><strong>Operating System:</strong>
+          <ul>
+            <li><strong>Windows:</strong> Windows 10 or Windows 11 (64-bit).</li>
+            <li><strong>Linux:</strong> Ubuntu 20.04+, Debian 11+, Fedora 36+, or Arch Linux (x86_64) with GTK 3 & SQLite3.</li>
+          </ul>
+        </li>
         <li><strong>Storage:</strong> Adequate local disk space or network-attached storage (NAS/WebDAV) to hold downloaded video files.</li>
         <li><strong>Network:</strong> An active internet connection for communicating with the Zoom API and streaming downloads.</li>
       </ul>
@@ -74,8 +80,22 @@
       <div class="step-card">
         <div class="step-number">1</div>
         <div class="step-content">
-          <h3>Download & Install the Desktop Application</h3>
-          <p>Download the official Zoom BackUpz installer (<code>zoom_backup_system.exe</code>) on your Windows machine and run the setup. The application will launch with a clean sign-in screen.</p>
+          <h3>Download the Desktop Application</h3>
+          <p>Get the official release package for your operating system from our <a href="/downloads" style="color: var(--primary); font-weight: 600;">Downloads Page</a>:</p>
+          <div style="display: flex; gap: 10px; margin: 12px 0; flex-wrap: wrap;">
+            <a href="https://pub-c35935302f714d1a97c9c097bcecf7af.r2.dev/ZoomBackUpz-v1.0.0-windows-x64.zip" class="btn" style="padding: 8px 16px; font-size: 13px;" download>
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/></svg>
+              Windows v1.0.0 (.zip)
+            </a>
+            <a href="https://pub-c35935302f714d1a97c9c097bcecf7af.r2.dev/ZoomBackUpz-v1.0.0-linux-x64.tar.gz" class="btn btn-outline" style="padding: 8px 16px; font-size: 13px;" download>
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12.001 0c-4.417 0-8 3.582-8 8 0 2.454 1.111 4.654 2.871 6.113-.01.127-.021.255-.021.387 0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5c0-.132-.011-.26-.021-.387 1.76-1.459 2.871-3.659 2.871-6.113 0-4.418-3.583-8-8-8zm-2.5 5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm5 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"/></svg>
+              Linux v1.0.0 (.tar.gz)
+            </a>
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 0;">
+            <strong>Windows:</strong> Extract the ZIP archive and launch <code>zoom_backup_system.exe</code>.<br/>
+            <strong>Linux:</strong> Extract and run <code>chmod +x install.sh && ./install.sh</code>.
+          </p>
         </div>
       </div>
 
@@ -197,6 +217,7 @@
   <footer>
     <div class="footer-container">
       <div class="footer-links">
+        <a href="/downloads">Downloads</a>
         <a href="/docs">Documentation</a>
         <a href="/configure">Configuration</a>
         <a href="/support">Support</a>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="zoom-domain-verification" content="ZOOM_verify_c60ad54d856440309299946bdbf1e6b2" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Zoom BackUpz — Windows & Linux Releases</title>
+  <meta name="description" content="Download the official Zoom BackUpz desktop client for Windows and Linux. Sovereign, local-first archiving and indexing for Zoom Cloud Recordings." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    .download-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 28px 0;
+    }
+    .platform-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--card-radius);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .platform-card:hover {
+      border-color: rgba(11, 92, 255, 0.4);
+      transform: translateY(-2px);
+    }
+    .platform-badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--success);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .platform-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .platform-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .platform-icon.windows {
+      background: linear-gradient(135deg, #0078d4, #005a9e);
+      color: #fff;
+    }
+    .platform-icon.linux {
+      background: linear-gradient(135deg, #e95420, #77216f);
+      color: #fff;
+    }
+    .platform-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+    .platform-meta {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .platform-features {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0;
+    }
+    .platform-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+      margin-bottom: 10px;
+    }
+    .platform-features li svg {
+      flex-shrink: 0;
+      color: #38bdf8;
+    }
+    .btn-download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 22px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 9px;
+      text-decoration: none;
+      font-size: 15px;
+      transition: background 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 14px rgba(11, 92, 255, 0.35);
+    }
+    .btn-download:hover {
+      background: var(--accent-hover);
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(11, 92, 255, 0.5);
+    }
+    .btn-download.linux {
+      background: #10b981;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+    }
+    .btn-download.linux:hover {
+      background: #059669;
+      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.5);
+    }
+    .alt-links {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    .alt-links a {
+      color: #94a3b8;
+    }
+    .alt-links a:hover {
+      color: #38bdf8;
+    }
+    .hash-box {
+      margin-top: 14px;
+      padding: 10px 12px;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      word-break: break-all;
+    }
+    .hash-label {
+      color: var(--text-secondary);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    @media (max-width: 768px) {
+      .download-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20 7.5c.55 0 1 .45 1 1v1.6l5-3.3c.36-.24.84.02.84.45v13.5c0 .43-.48.69-.84.45l-5-3.3V19.5c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1V8.5c0-.55.45-1 1-1h14zm-7.5 10l-3.8-3.8 1.4-1.4 1.4 1.4V9.5h2v4.2l1.4-1.4 1.4 1.4-3.8 3.8z" fill="#FFFFFF"/>
+            <path d="M5.5 24.5h21" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span>Zoom BackUpz</span>
+      </a>
+      <nav>
+        <a href="/downloads" class="active">Downloads</a>
+        <a href="/docs">Documentation</a>
+        <a href="/configure">Configure</a>
+        <a href="/support">Support</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
+        <a href="https://github.com/JTyrell/Zoom-Indexer" target="_blank" rel="noopener" class="github-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="badge">Official Releases • v1.0.0</div>
+      <h1>Download Zoom BackUpz</h1>
+      <div class="meta-date">Sovereign, local-first desktop application for Windows 10/11 and Linux x86_64</div>
+    </div>
+
+    <!-- Download Cards Grid -->
+    <div class="download-grid">
+      <!-- Windows Card -->
+      <div class="platform-card">
+        <div class="platform-badge">Stable Release</div>
+        <div>
+          <div class="platform-header">
+            <div class="platform-icon windows">
+              <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/></svg>
+            </div>
+            <div>
+              <h2 class="platform-title">Windows</h2>
+              <div class="platform-meta">Windows 10 / 11 (64-bit) • v1.0.0</div>
+            </div>
+          </div>
+
+          <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+            Full standalone release package including Flutter engine, SQLite offline indexer, and Win32 protocol integrations.
+          </p>
+
+          <ul class="platform-features">
+            <li>
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Windows DPAPI cryptographic credential vault
+            </li>
+            <li>
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Native System Tray background sync engine
+            </li>
+            <li>
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Portable: extract and run (no admin install required)
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <a href="https://pub-c35935302f714d1a97c9c097bcecf7af.r2.dev/ZoomBackUpz-v1.0.0-windows-x64.zip" class="btn-download" download>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            Download for Windows (.zip • 13.9 MB)
+          </a>
+
+          <div class="alt-links">
+            <a href="https://pub-c35935302f714d1a97c9c097bcecf7af.r2.dev/zoom_backup_system.exe" download>Standalone .exe (145 KB)</a>
+            <a href="https://pub-c35935302f714d1a97c9c097bcecf7af.r2.dev/ZoomBackUpz-latest.zip" download>Latest Alias (.zip)</a>
+          </div>
+
+          <div class="hash-box">
+            <div class="hash-label">SHA-256 Checksum:</div>
+            A8F5D7BB8AA2DA0416E65F0C7361D72CC8C995C4D93DEC1702F855DFEB7EC414
+          </div>
+        </div>
+      </div>
+
+      <!-- Linux Card -->
+      <div class="platform-card">
+        <div class="platform-badge">Stable Release</div>
+        <div>
+          <div class="platform-header">
+            <div class="platform-icon linux">
+              <svg width="26" height="26" fill="currentColor" viewBox="0 0 24 24"><path d="M12.001 0c-4.417 0-8 3.582-8 8 0 2.454 1.111 4.654 2.871 6.113-.01.127-.021.255-.021.387 0 4.142 3.358 7.5 7.5 7.5s7.5-3.358 7.5-7.5c0-.132-.011-.26-.021-.387 1.76-1.459 2.871-3.659 2.871-6.113 0-4.418-3.583-8-8-8zm-2.5 5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm5 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"/></svg>
+            </div>
+            <div>
+              <h2 class="platform-title">Linux</h2>
+              <div class="platform-meta">Ubuntu, Debian, Fedora, Arch (x86_64) • v1.0.0</div>
+            </div>
+          </div>
+
+          <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 12px;">
+            Linux tarball package with automated installer, XDG desktop application integration, and deep-link protocol handler.
+          </p>
+
+          <ul class="platform-features">
+            <li>
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Automated installer with <code>zoombackup://</code> protocol registration
+            </li>
+            <li>
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Desktop launcher entry with high-resolution app icon
+            </li>
+            <li>
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Offline SQLite cataloging and direct HTTPS CDN downloads
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <a href="https://pub-c35935302f714d1a97c9c097bcecf7af.r2.dev/ZoomBackUpz-v1.0.0-linux-x64.tar.gz" class="btn-download linux" download>
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            Download for Linux (.tar.gz • 48 KB)
+          </a>
+
+          <div class="alt-links">
+            <a href="https://pub-c35935302f714d1a97c9c097bcecf7af.r2.dev/ZoomBackUpz-latest-linux-x64.tar.gz" download>Latest Alias (.tar.gz)</a>
+            <a href="/docs#adding-the-app">Setup Instructions &rarr;</a>
+          </div>
+
+          <div class="hash-box">
+            <div class="hash-label">SHA-256 Checksum:</div>
+            0D9E76F1498DD35B3E2F3924E9F673B9F1E141E415DEAFE895BD09FCD1377A11
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Installation Guides -->
+    <div class="card">
+      <h3 style="margin-top: 0;">Installation Instructions</h3>
+      
+      <div class="grid-2" style="margin-top: 16px;">
+        <div>
+          <h4 style="color: #fff; margin-bottom: 8px;">Windows 10 / 11 Quick Start:</h4>
+          <ol style="margin-bottom: 0;">
+            <li>Download <code>ZoomBackUpz-v1.0.0-windows-x64.zip</code> above.</li>
+            <li>Right-click the zip file and select <strong>Extract All...</strong></li>
+            <li>Open the extracted folder and double-click <code>zoom_backup_system.exe</code>.</li>
+            <li>Sign in via Zoom OAuth 2.0 and choose your local backup destination.</li>
+          </ol>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; margin-bottom: 8px;">Linux (x86_64) Quick Start:</h4>
+          <pre style="background: rgba(0,0,0,0.4); padding: 12px; border-radius: 6px; border: 1px solid var(--border-color); font-size: 12.5px; overflow-x: auto; color: #a5f3fc;"><code>tar -xzf ZoomBackUpz-v1.0.0-linux-x64.tar.gz
+chmod +x install.sh
+./install.sh</code></pre>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">
+            The installer places the binaries into <code>~/.local/share/zoombackupz</code> and registers the <code>zoombackup://</code> system protocol handler.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security & Verification -->
+    <div class="callout">
+      <div class="callout-title">Cryptographic Integrity & Zero-Knowledge Architecture</div>
+      <p>
+        All releases are hosted on Cloudflare's globally distributed R2 edge infrastructure over TLS 1.3 encryption. 
+        Zoom BackUpz is 100% open-source and operates strictly client-side: all recordings stream directly from Zoom's official CDN to your private computer.
+        You can inspect the full source code and audit reports on <a href="https://github.com/JTyrell/Zoom-Indexer" target="_blank" rel="noopener">GitHub</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="/downloads">Downloads</a>
+        <a href="/docs">Documentation</a>
+        <a href="/configure">Configure</a>
+        <a href="/support">Support</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
+        <a href="https://github.com/JTyrell/Zoom-Indexer" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p>
+        Zoom BackUpz is an independent application and is not affiliated with, sponsored by, or endorsed by Zoom Video Communications, Inc. Zoom is a registered trademark of Zoom Video Communications, Inc.
+      </p>
+      <p style="font-size: 12px; color: var(--text-muted);">&copy; 2026 Zoom BackUpz. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
